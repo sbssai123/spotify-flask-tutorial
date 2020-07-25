@@ -16,7 +16,7 @@ def login():
     if token_info and not sp_oauth.is_token_expired(token_info):
         access_token = token_info['access_token']
         session['access_token'] = access_token
-        return redirect(url_for('spotify.last_played'))
+        return redirect(url_for('spotify.top_tracks'))
     else:
         login_url = sp_oauth.get_authorize_url()
         return redirect(login_url)
