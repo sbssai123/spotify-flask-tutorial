@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6 mt-5">
+                <h2 class="text-white">Currently Playing</h2>
+                <img width=400px height= 400px src="{{current_playing.image}}">
+                <h4 class="text-white">
+                    <b>{{current_playing.song}}</b> - {{current_playing.artist}}
+                </h4>
+            </div>
+            <div class="col-6" style="overflow-y: scroll; height: 100vh;">
+                <h2 class="text-white">Your Top 20 Tracks</h2>
+                <div class="row mt-3">
+                    {% for track in top_tracks %}
+                    <div class="col-6 mt-5">
+                        <img width=200px height= 200px src="{{track.album_image}}">
+                    </div>
+                    <div class="col-6 mt-5">
+                        <h5 class="text-white">
+                            {{track.track_name}}
+                        </h5>
+                        <p class="text-white">
+                            {{track.album_name}} - {{track.artist_name}}
+                        </p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
