@@ -38,24 +38,15 @@ def set_token():
 def top_tracks():
     access_token = session['access_token']
     sp_api = spotipy.Spotify(access_token)
-    top_tracks_result = sp_api.current_user_top_tracks()
-    
     all_top_tracks = []
-    for t in top_tracks_result['items']:
-        print(t)
-        top_track = {}
-        top_track['artist_name'] = t['artists'][0]['name']
-        top_track['track_name'] = t['name']
-        top_track['album_name'] = t['album']['name']
-        top_track['album_image'] = t['album']['images'][0]['url']
-        top_track['track_id'] = t['id']
-        all_top_tracks.append(top_track)
-
-    current_song_result = sp_api.current_user_playing_track()['item']
+    # TODO: fill in to get all the top tracks
     current_playing = {}
-    current_playing['song'] = current_song_result['name']
-    current_playing['image'] = current_song_result['album']['images'][0]['url']
-    current_playing['artist'] = current_song_result['artists'][0]['name']
+    result = sp_api.current_user_playing_track()
+    if result:
+        current_song_result = result['item']
+        current_playing['song'] = current_song_result['name']
+        current_playing['image'] = current_song_result['album']['images'][0]['url']
+        current_playing['artist'] = current_song_result['artists'][0]['name']
     return render_template('top_tracks.html', top_tracks=all_top_tracks, 
     current_playing=current_playing)
 
@@ -64,5 +55,4 @@ def top_tracks():
 def add_to_queue(track_id):
     access_token = session['access_token']
     sp_api = spotipy.Spotify(access_token)
-    sp_api.add_to_queue(track_id)
-    return redirect(url_for('spotify.top_tracks'))
+    # TODO: add song to back of queue
