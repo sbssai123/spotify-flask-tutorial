@@ -26,4 +26,4 @@ How to run this app locally:
 5. `export FLASK_ENV=development`
 6. `flask run`
 
-[Slide Deck from HobbyHacks Workshop](http://github.com)
+[Slide Deck from HobbyHacks Workshop](https://docs.google.com/presentation/d/1XlORVOcAcJ5ss-PisHV9_OBYfTTgolQpxj1-DJQ0kcI/edit?usp=sharing)
