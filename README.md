@@ -25,3 +25,5 @@ How to run this app locally:
 4. `export FLASK_APP=spotify-app`
 5. `export FLASK_ENV=development`
 6. `flask run`
+
+[Slide Deck from HobbyHacks Workshop](http://github.com)
