@@ -2,7 +2,7 @@
 
 Prerequisites:
 
-1. Make sure you have Python 3.7, Flask installed
+1. Make sure you have Python 3.7, Flask installed (make sure you are using pip version 3 >)
 ```
 pip install Flask
 pip install spotipy --upgrade
@@ -27,3 +27,5 @@ How to run this app locally:
 6. `flask run`
 
 [Slide Deck from HobbyHacks Workshop](https://docs.google.com/presentation/d/1XlORVOcAcJ5ss-PisHV9_OBYfTTgolQpxj1-DJQ0kcI/edit?usp=sharing)
+
+[Slide Deck from DA Hacks Intro To APIs Workshop](https://docs.google.com/presentation/d/1sbem0WdkuQO2RYt58yqXdbDd8LXfZl666mcU4o1yTgk/edit#slide=id.g8ca514999e_0_234)
